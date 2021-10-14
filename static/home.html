@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='tests11.css') }}"> -->
+    <link rel="stylesheet" type="text/css" href="test30.css">
+    
+    <!-- <script src="{{url_for('static',filename='funcsmn84.js')}}"></script> -->
+    <script src="funcs110.js"></script>
+     <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body onload="fetchmovieslideshow()">
+    <div>
+    <h2 style="font-family: 'Poppins', sans-serif;
+    font-weight: bold;color :#a6241c;font-size: 1.7rem;">THE MOVIE DB</h2>
+    <div style="width:385px;height:27px; background-image: linear-gradient(to left,#601610, black);position:absolute; top:0px;margin-left:1051px;margin-top: 10px;"> hi</div>
+</div>
+
+    <div class="grid-container">
+        
+        <div class="item2">
+            <div class="tab">
+                <button class="tablinks"style="margin-top: 10px;margin-left:28px"onclick="divView('home')" >Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10230;</button>
+                
+                <button style="margin-top: 30px;margin-left:28px;color:white" class="tablinks" onclick="divView('search')"  >Search&nbsp;&nbsp;&nbsp;&nbsp;&#10230;</button>
+                <hr style="width:112px;margin-top:20px;margin-left:1.4rem">
+                
+              </div>
+              
+        </div>
+        
+        
+        
+        
+        <div class="item3">
+            <div class="main" >
+               
+            <div id="movie-screen" style="margin-top: 25px;" class="slideshow">
+                <h2 style="text-align: center; color: white;background-color: black;
+                font-family: 'Raleway', sans-serif; font-size: 18px;
+                margin-bottom: 10px;font-weight: 100; ">Trending Movies</h2><img class="mySlides" src="" style="width:100%;height:300px;background-color:black">
+                <div class="text"style="color: white;position:absolute;width:600px;height:60px;top:347px;"><h4 class="textmatter">caption text</h4></div>
+            </div>
+            
+            <div id="tv-screen" class="slideshow" style="margin-top:100px ;">
+                <h2 style="text-align: center; color: white;background-color: black;
+                font-family: 'Raleway', sans-serif; font-size: 18px;
+                margin-bottom: 10px;font-weight: 100;">TV Shows On-Air Today</h2>
+                <img class="mySlides" src="" style="width:100%;height:300px;background-color:black">
+                <div class="text" style="color: white;font-weight: 100; position:absolute;width:600px;height:60px;top:747px"><h4 class="textmatter">caption text</h4></div>
+            </div>
+            
+        </div>
+           <div class="main2" style="display:none;">
+            
+            <div class="search" >
+                <h2 style="color:white;text-align: center; padding-top: 1.2rem;"><b>Search</b></h2><br>
+                <label style="padding-left:14rem;font-family: 'Raleway', sans-serif;font-size: 15px;" for="fname">Keyword<span style="color:red;"> &#42</span></label>
+                <input style="margin-left: 10px;" type="text" id="fname" name="fname" value="" class="keywordname" size="38">
+                <br><br>
+                <label style="padding-left:14rem;font-family: 'Raleway', sans-serif;font-size: 15px;">Category<span style="color:red"> &#42 </span>
+               
+                    <select style="margin-left: 9px;" id="category"> 
+                        <option value=""></option>
+                        <option value="Movies">Movies</option> 
+                        <option value="TV Shows">TV Shows</option> 
+                        <option value="Movies and TV Shows">Movies and TV Shows</option> 
+                    </select> 
+        </label>
+            <br>
+            <br>
+            <button class="btn-search-clear" onclick="validatsearch()"style="margin-left:22rem"type="button">Search</button>
+            <div class="divider"></div>
+
+            <button class="btn-search-clear" type="button"  onclick="clearfields()">Clear</button>
+            </div>
+            
+           </div>
+            
+    
+        </div>
+
+
+
+
+        
+        <div style="width:1185px" class="item5">
+        <p style="margin-left: 890px;" class="item5-style"><i>Designed and developed by Naveen</i></p>
+        <p style="margin-left: 980px;"class="item5-style"><i>Powered by TMDB</i></p>
+    
+        </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="pop-up" style="width: 1380px;">
+   
+    <div  class="div-image-box" >
+        <div style="width:735px;height:410px; background-color: black;margin-top:30px; margin-left:30px">
+    <img id="poster-path-popup" style="background-color: grey; height:100%;width:100%" src="">
+    <button style="padding-top: 0px;
+    left: 1067px;
+    top: 90px;"; class="clearx-button" >x</button c>
+</div>
+</div>
+  
+
+
+
+
+
+
+
+    <div class="text-wrapper">
+    <h1 class="text-wrapper-matter" style="font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;font-weight: 400;"><span id=pop-text-heading></span> <span><a target="_blank" id="popup-movie-website" style="color:#a6241c;font-size: 0.85rem;text-decoration: none;"href="">&nbsp;&nbsp;&#9432</a></span></h1>
+    <p style="margin-top: 20px;"class="text-wrapper-matter"></p>
+    <p style="margin-top: 15px;
+    font-size: 0.8rem;"class="text-wrapper-matter" style="color:#a6241c;"><span style ="color :#a6241c "> &#9733;</span><span id="popup-rating"style="color:#a6241c;">&nbsp;&nbsp;</span><span>&nbsp;</span><span><sup id=popup-votes></sup></span></p>
+    <p style="margin-top: 25px;
+    
+    padding-right: 36px;" class="text-wrapper-matter"></p>
+    <h1 style="font-size: 0.8rem;
+    margin-top: 20px;font-weight: 600;"class="text-wrapper-matter"><i id="popup-italic"> </i></h1>
+    
+    </div>
+
+<div class="popup-empty"style="margin-left:280px ;margin-right: 0px; width: 810px;background-color:grey;height:40px">
+    <h1></h1>
+</div>
+
+
+    <div style="margin-left:280px ;margin-right: 0px; width: 810px;background-color:grey;"class="cast-container">
+        <h2 id = "cast-popup-id"style="font-size: 1.3rem;
+        color: black;
+        font-weight: bolder;" class="text-wrapper-matter"><b>Cast</b></h2>
+        <div class="row" style="margin-left: 30px;
+        margin-top: 5px;
+        font-family: 'Raleway';">
+           
+        </div>   
+            <div class="row" style="margin-left: 30px;
+            margin-top: 15px;
+            font-family: 'Raleway';">
+                
+        
+    </div>
+
+
+
+      
+      </div>
+      <div class="popup-empty"style="margin-left:280px ;margin-right: 0px; width: 810px;background-color:grey;height:40px">
+        <h1></h1>
+    </div>
+
+
+
+<div  class="review-text-wrapper">
+
+
+    
+    <p style="margin-left: 30px;font-family:'Raleway', sans-serif;
+    font-size: 25px;"><b>Reviews</b></p>
+    
+
+</div>
+<div class="popup-empty"style="margin-left:280px ;margin-right: 0px; width: 810px;background-color:grey;height:40px">
+    <h1></h1>
+</div>
+</div>
+
+
+
+
+
+
+    
+</body>
+
+</html>

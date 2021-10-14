@@ -1,0 +1,338 @@
+body{
+  background-color: black;
+  position:relative;
+  margin:0;
+}
+h2{
+  color: #601610;
+}
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.item1 { grid-area: header; background-color: black; }
+.item2 { grid-area: menu; background-color:black; min-height:906px;max-height:100%;height:100%;width:240px;margin-top: 0px;border-right: 2px solid white;}
+.item3 { grid-area: main; background-color:black; min-height:800px;max-height:100%;height:100%;margin-top: 0px; width:1060px;}
+
+.item5 { grid-area: footer; background-color: #601610;margin-top: 72px;
+  height: 30px; margin-left:10px;}
+  .item5-style{
+    font-size: 0.7rem;
+    font-family: 'Raleway', sans-serif;
+
+  }
+  .grid-container {
+  margin-top:8px;
+    display: grid;
+  grid-template-areas:
+    'menu main main main '
+    'menu footer footer footer'
+  ;
+ 
+  background-color:black;
+  z-index: -1;
+  
+}
+
+
+.tab {
+  float: right;
+  position: absolute;
+  background-color:black;
+  width:100px;
+  margin-left: 6.4rem;
+  height: 300px;
+  color: #a6241c;
+}
+.tab button {
+  display: block;
+  background-color: black;
+  color:#601610;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+.slideshow{
+    height: 300px;
+    width:600px;
+    background-color: black;
+    margin-left: 170px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.9rem;
+}
+.text{
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  vertical-align: middle;
+  display:table-cell;
+  
+  
+ }
+.textmatter{
+  font-weight:normal ;
+  margin-top: 23px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.search{
+    width:980px;
+    height:200px;
+    background-image: linear-gradient(#a6241c, black);
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    
+}
+.btn-search-clear{
+  background-color: black;
+  color:white;
+  border: none;
+  color: white;
+  padding-left: 10px;
+  padding-right:10px;
+  padding-top:8px;
+  padding-bottom:8px;
+  text-align: center;
+  border-radius: 4px;
+  
+}
+.btn-search-clear:hover{
+  background-color:red;
+}
+.divider{
+  width: 40px;
+  height:auto;
+  display:inline-block;
+}
+
+.No-heading-results{
+  color:white;
+  font-family: 'Raleway', sans-serif;
+  margin-left: 350px;
+  margin-bottom: 0px;
+  margin-top: 150px;
+}
+
+.heading-results{
+  font-family: 'Raleway', sans-serif;
+  color:white;
+  margin-top:10px;
+  margin-left:10px;
+  font-weight: normal;
+}
+.results{
+  width:980px;
+  height:240px;
+  background-color:black;
+  margin-top:18px;
+  border-left: 7px solid #a6241c;
+  text-align:left;
+  margin-left:10px;
+}
+.search_poster{
+  width: 150px;
+  height: 220px;
+  background-color: red;
+  float: left;
+  margin-right: 25px;
+  margin-left: 9;
+  margin-top: 8px;
+  margin-left: 9px;
+
+}
+.s-1{
+  font-size: 22px;
+  margin-top:3px;
+  margin-left:5px;
+  color:white;
+  font-family: 'Raleway', sans-serif;
+
+}
+.s-2{
+  font-family: 'Raleway', sans-serif;
+  margin-top:20px;
+  margin-left:5px;
+  color:white;
+  font-size: 12px;
+}
+.s-3{
+  font-size: 12px;
+  font-family: 'Raleway', sans-serif;
+  margin-top:3px;
+  margin-left:5px;
+  color:white;
+
+}
+.s-4{
+  font-family: 'Raleway', sans-serif;
+  margin-top:20px;
+  margin-left:3px;
+  color:white;
+  font-size:0.8rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+}
+.btn-show-more{
+  margin-top: 20px;
+  background-color:#a6241c;
+  color:white;
+  border: none;
+  color: white;
+  padding-left: 10px;
+  padding-right:10px;
+  padding-top:8px;
+  padding-bottom:8px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+
+.pop-up{
+   top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; 
+  height: 100%;
+  background-color:rgba(0, 0, 0, 0.6);
+  z-index:1;
+  display:none;
+  overflow-y: scroll;
+  max-height:100%;
+  width: 1320px;
+  position: fixed;
+  padding-top: 20px;
+  padding-left: 20px;
+ 
+}
+.column {
+  float: left;
+  width: 180px;
+  
+  height: 330px; /* Should be removed. Only for demonstration */
+  
+  margin-top:10px;
+  margin-right:10px;
+
+ background-color:grey;
+}
+.div-image-box{
+  width: 810px;
+    height: 450px;
+    background-color: grey;
+    margin-left: 280px;
+    margin-right: 0px;
+    margin-top: 40px;
+    display: inline-block;
+}
+
+.img-box{
+    width:100%;
+    height:260px;
+    background-color:yellow;
+    
+
+}
+.text-wrapper,.review-text-wrapper{
+    margin-left: 280px;
+    margin-right: 80px;
+    width: 810px;
+    background-color:grey
+}
+.text-wrapper-matter{
+  margin-left:30px;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Clear floats after the columns */
+
+  
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  margin-left:30px;
+}
+.text-popup{
+    margin:0px;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-line-clamp:1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    
+}
+
+
+
+.clearx-button {
+  background: none;
+  border: 0;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+  left: 50%;
+  letter-spacing: 1.5px;
+  line-height: 90px;
+  outline: none;
+  overflow: hidden;
+  padding: 10px 0 0;
+  position: absolute;
+  text-transform: uppercase;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease-in;
+  width: 100px;
+  margin-left: 20px;
+}
+.clearx-button:hover{
+  color:black
+}
+
+
+.reviews-text{
+  font-family: 'Raleway', sans-serif;
+  margin-left:30px;
+  margin-top:20px;
+  width:780px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  padding-right: 50px;
+}
+.reviews-text-matter{
+  font-family: 'Raleway', sans-serif;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.star{
+  color: #97252c;
+}
+
+.line{
+  padding-left: 100px;
+    width: 90%;
+  margin-left: 30px;
+  margin-top: 20px;
+  border-top: 1px solid #696969;
+
+  border-right-width: 0px;
+  padding-bottom: 0px;
+  border-left-width: 0px;
+  border-bottom-width: 0px;
+}

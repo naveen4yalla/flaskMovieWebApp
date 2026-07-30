@@ -73,9 +73,9 @@ The server starts on `http://0.0.0.0:5008`. Open <http://localhost:5008/> in you
 
 ## Screenshots
 
-<!-- Add screenshots of the home screen, search results, and detail view here. -->
+![Movie browser home](docs/screenshots/home.png)
 
-_Screenshots coming soon._
+The home screen showing trending movies of the week and TV shows airing today, powered by live TMDB data.
 
 ## License
 
